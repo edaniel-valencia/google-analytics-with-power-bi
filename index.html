@@ -1,141 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
-
-
 <head>
-
-
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>UNIR</title>
+    <meta name="description" content="Data Analyst Portfolio - Google Analytics & Power BI" />
+    <meta name="author" content="Edwin Daniel Valencia Martinez" />
+    <title>UNIR - Data Analytics Dashboard</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-
-    <!-- Libreria D3.js Version 6 -->
-    <!-- D3.js (Data-Driven Documents) es una biblioteca de JavaScript ampliamente utilizada para crear visualizaciones de datos en la web. La versión que se utilizará en esta documentación es D3.js v6, que se carga desde una ubicación en línea. -->
-    <!-- Para comenzar a utilizar D3.js v6 en tu proyecto web, simplemente agrega la siguiente etiqueta `script` a tu archivo HTML para cargar la biblioteca desde su ubicación en línea -->
-
     <script src="https://d3js.org/d3.v6.min.js"></script>
-
-    <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
-        rel="stylesheet" />
-
-    <!-- Uso CSS (includes Bootstrap)-->
+    <!-- Modern Data Analyst Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+</head>
+<body id="page-top" class="bg-light">
 
-<body id="page-top">
-
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a class="navbar-brand fw-bold" href="#page-top">UNIR</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="bi-list"></i>
+            <a class="navbar-brand fw-bold" href="#page-top">
+                <i class="bi-bar-chart-fill me-2 text-primary"></i>UNIR Analytics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#Google">Google Analytics</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="#Power">Power BI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Google">Google Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Power">Power BI</a></li>
                 </ul>
-                <a class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" target="_blank" href="Actividad_Individual_1_Valencia_Martinez_Edwin_Daniel.pdf">
-                    <span class="d-flex align-items-center">
-                        <i class="bi-download me-2"></i>
-                        <span class="small">Descargar Informe</span>
-                    </span>
-                </a>
+                <button class="btn btn-primary rounded-pill px-4" id="btn-preview-pdf">
+                    <i class="bi-file-earmark-pdf-fill me-2"></i>Descargar Informe
+                </button>
             </div>
         </div>
     </nav>
 
-    <header class="masthead">
-        <div class="container">
-            <br>
+    <!-- Header -->
+    <header class="masthead bg-light text-dark text-center py-5 mt-5">
+        <div class="container px-5 mt-5">
             <div class="row gx-5 align-items-center">
-                <div class="col-lg-6">
-                    <center>
-                        <div class="mb-5 mb-lg-0 text-center ">
-                            <img src="assets/img/images.png" alt="..." />
-                            <h1 class=" lh-2 mb-3 font-alt">Google Analytics y elaboración de informe en Power BI</h1>
-
-                        </div>
-                    </center>
+                <div class="col-lg-6 text-lg-start">
+                    <h1 class="display-4 fw-bold mb-3">Data Analytics & Visualization</h1>
+                    <p class="lead fw-normal text-muted mb-4">Integración de Google Analytics y modelado de datos interactivo con Power BI.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start mb-5 mb-lg-0">
+                        <img src="assets/img/images.png" alt="Analytics Logo" class="me-3" style="height: 50px;" />
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="masthead-device-mockup">
-                        <img src="https://www.tatvasoft.com/blog/wp-content/uploads/2019/07/power-bi-google-analytics-power-analytics-1-1280x720.jpg" style=" border-radius: 5%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);" width="100%" alt="..." />
+                    <div class="dashboard-preview">
+                        <img src="assets/img/cloud.png" class="img-fluid rounded shadow-lg" alt="Cloud Infrastructure" />
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="Google">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                        <div class="h1 font-alt text-dark text-center mb-4">Analisis con Google Analytics</div>
-                        <div class="text-center">
-                            <img src="assets/img/google-analytics.jpg" width="100%">
-                        </div>
-        
-                       
-        
+    <!-- Google Analytics Section -->
+    <section id="Google" class="py-5">
+        <div class="container px-5 py-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xl-8 col-lg-10 text-center">
+                    <h2 class="fw-bold mb-4">Análisis con Google Analytics</h2>
+                    <p class="text-muted mb-5">Obtención de insights valiosos a través de herramientas de monitoreo de tráfico y comportamiento de usuarios.</p>
+                    <div class="card shadow border-0 rounded-3">
+                        <img src="assets/img/google-analytics.jpg" class="card-img-top rounded-3" alt="Google Analytics Dashboard">
                     </div>
                 </div>
             </div>
-    </section>
-    <section class="bg-light" id="Power">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                <div class="h1 font-alt text-dark text-center mb-4">Dashboard en Power BI</div>
-                <div class="text-center"><p>Si eres parte de la comunidad unir puede ver desde el informe de Power Bi. <br><a href="https://app.powerbi.com/reportEmbed?reportId=61616fdc-0f6d-4a14-befe-fd94d3091d07&autoAuth=true&ctid=899789dc-202f-44b4-8472-a6d40f9eb440" target="_blank">Ver el informe online</a></p></div>
-
-                <div class="text-center">
-                    <img src="assets/img/dashboard.png" width="100%">
-                </div>
-                <div class="text-center"><p>Descarga el Dataset con el que hemos utilizar para realizar la interfaz tipo dashboard utilizando Power Bi de Mircrosoft. <br><a href="tienda-virtual.xlsx" target="_blank">Descargar dataset</a></p></div>
-
-                <div class="text-center">
-                    <br>
-                    <h2 class="font-alt ">Proyecto en archivo .pbix, <br> <a href="Actividad_Unir_Valencia_Daniel.pbix" target="_blank">Descargar Proyecto</a></h2>
-
-                </div>
-
-
-            </div>
-        </div>
-        </div>
         </div>
     </section>
 
-
-    <!-- Footer-->
-    <footer class="bg-black text-center py-5">
-        <div class="container px-5">
-            <div class="text-white-50 small">
-     <div class="mb-2"><a href="https://edanielvalencia.com"
-                        target="_blank">www.edaniel-valencia.com</a>
+    <!-- Power BI Section -->
+    <section id="Power" class="py-5 bg-white">
+        <div class="container px-5 py-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                <div class="col-xl-10 text-center">
+                    <h2 class="fw-bold mb-4">Dashboard Interactivo en Power BI</h2>
+                    <p class="lead text-muted mb-4">Visualización y toma de decisiones basadas en datos estructurados de nuestra tienda virtual.</p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+                        <a class="btn btn-outline-primary rounded-pill px-4 py-2" href="https://app.powerbi.com/reportEmbed?reportId=61616fdc-0f6d-4a14-befe-fd94d3091d07&autoAuth=true&ctid=899789dc-202f-44b4-8472-a6d40f9eb440" target="_blank">
+                            <i class="bi-globe me-2"></i>Ver Informe Online
+                        </a>
+                        <a class="btn btn-outline-success rounded-pill px-4 py-2" href="tienda-virtual.xlsx" target="_blank">
+                            <i class="bi-file-earmark-excel-fill me-2"></i>Dataset (Excel)
+                        </a>
+                        <a class="btn btn-outline-dark rounded-pill px-4 py-2" href="Actividad_Unir_Valencia_Daniel.pbix" target="_blank">
+                            <i class="bi-bar-chart-steps me-2"></i>Proyecto .pbix
+                        </a>
+                    </div>
+                    
+                    <div class="card shadow-lg border-0 rounded-3 overflow-hidden">
+                        <img src="assets/img/dashboard.png" class="img-fluid" alt="Power BI Dashboard Preview">
+                    </div>
+                </div>
             </div>
-          
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 border-top">
+        <div class="container px-5">
+            <div class="text-muted small">
+                <div class="mb-2">&copy; <span id="currentYear"></span> Desarrollado por E. Daniel Valencia de ADAVAM.</div>
+                <div><a href="https://edanielvalencia.com" class="text-muted text-decoration-none" target="_blank">www.edaniel-valencia.com</a></div>
+            </div>
         </div>
     </footer>
 
-</body>
+    <!-- PDF Preview Modal -->
+    <div class="modal fade" id="pdfPreviewModal" tabindex="-1" aria-labelledby="pdfPreviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-white text-dark border-0 shadow-lg">
+                <div class="modal-header border-bottom">
+                    <h5 class="modal-title" id="pdfPreviewModalLabel"><i class="bi-file-earmark-pdf-fill text-danger me-2"></i>Previsualización del Informe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 75vh;">
+                    <iframe id="pdfIframe" src="" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+                <div class="modal-footer border-top">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <a href="#" id="btn-actual-download" class="btn btn-primary" download>
+                        <i class="bi-download me-2"></i>Descargar Archivo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script type="module" src="js/app.js"></script>
+</body>
 </html>

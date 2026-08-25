@@ -1,0 +1,52 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.masthead {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Custom button styles */
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* Modal refinements */
+.modal-content {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.dashboard-preview img {
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
